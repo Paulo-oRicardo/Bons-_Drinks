@@ -13,5 +13,5 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Sass](https://sass-lang.com/)
 - 
 <h3 align="center"> 
-	🚧  React Select 🚀 Em construção...  🚧
+	🚧  React BonsDrinks 🚀 Em construção...  🚧
 </h3>
