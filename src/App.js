@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Components/Header";
+import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
+import BonsDrinks from "./Components/BonsDrinks";
+import Drinks from "./Components/Drinks";
+import Sobre from "./Components/Sobre";
+import NossoTime from "./Components/NossoTime";
+import Contato from "./Components/Contato";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <BonsDrinks />
+          </Route>
+          <Route path="/drinks">
+            <Drinks />
+          </Route>
+          <Route path="/sobre">
+            <Sobre />
+          </Route>
+          <Route path="/nosso_time">
+            <NossoTime />
+          </Route>
+          <Route path="/contato">
+            <Contato />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;

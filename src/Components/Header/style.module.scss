@@ -1,0 +1,37 @@
+.Header {
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px 2px #525050;
+  background-color: lightyellow;
+}
+.Ul {
+  margin-left: -7%;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  li {
+    padding: 0 4rem;
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-family: Bilbo Swash Caps;
+    font-size: 2.6rem;
+    &hover {
+      color: red;
+    }
+  }
+  a {
+    font-family: Open Sans Condensed;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: black;
+    &:hover {
+      color: red;
+    }
+  }
+}
