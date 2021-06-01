@@ -5,7 +5,7 @@ import Drinks from "./Components/Drinks";
 import Sobre from "./Components/Sobre";
 import NossoTime from "./Components/NossoTime";
 import Contato from "./Components/Contato";
-
+import Footer from "./Components/Footer";
 const App = () => {
   return (
     <div className="App">
@@ -28,6 +28,7 @@ const App = () => {
             <Contato />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </div>
   );
