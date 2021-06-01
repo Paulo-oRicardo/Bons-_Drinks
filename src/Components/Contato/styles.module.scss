@@ -1,5 +1,67 @@
+:root {
+  --clr-white: #f1f1f1;
+}
+
 .containerContato {
   margin-top: -2rem;
   height: 91vh;
-  background-color: hsl(323 21% 16%);
+  background-color: #5d54a4;
+
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem 0;
+    color: #d789d7;
+    font-family: Open Sans;
+    font-weight: bold;
+  }
+
+  .divContact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+
+    img {
+      place-self: end;
+      width: 78%;
+      border-radius: 6px;
+      border: none;
+    }
+
+    .contactForm {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        margin: 0.75rem 0;
+        font-size: 1.25rem;
+        color: var(--clr-white);
+      }
+      input {
+        background: transparent;
+        border: 0;
+        outline: 0;
+        border-bottom: 2px solid var(--clr-white);
+        padding: 0 14rem;
+      }
+      :is(input, textarea) {
+        color: var(--clr-white);
+        font-size: 1.25rem;
+        font-weight: 300;
+        padding-left: 2%;
+        font-family: Open Sans;
+        font-weight: regular;
+      }
+      textarea {
+        margin-bottom: 1rem;
+        border-color: var(--clr-white);
+        background: transparent;
+      }
+      button {
+        width: 35%;
+        margin-left: auto;
+      }
+    }
+  }
 }

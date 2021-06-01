@@ -1,20 +1,18 @@
 :root {
-  --clr-neon: hsl(317 100% 54%);
-  --clr-bg: hsl(323 21% 16%);
+  --clr-neon: #d789d7;
 }
 .neonButton {
-  font-size: 2rem;
+  font-size: 1.5rem;
 
   color: var(--clr-neon);
 
   font-family: Open sans;
   font-weight: 600;
   cursor: pointer;
-  text-decoration: none;
   border: var(--clr-neon) 0.1em solid;
   border-radius: 0.5rem;
   padding: 0.25rem 1rem;
-  margin-left: 50%;
+  background-color: transparent;
   text-shadow: 0 0 0.03rem hsl(0 0% 100% / 0.5), 0 0 0.45rem currentColor;
 
   //inset adds the shadow to the inside of that element
@@ -34,7 +32,7 @@
 
     transform: perspective(0.7em) rotateX(40deg) scale(1, 0.4);
     filter: blur(1em);
-    opacity: 0.7;
+    opacity: 0.5;
   }
 
   &::after {
