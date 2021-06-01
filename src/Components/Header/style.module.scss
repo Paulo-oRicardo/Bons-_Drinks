@@ -1,11 +1,14 @@
+:root {
+  --clr-bg: #2a3d66;
+  --clr-nav: #d789d7;
+}
 .Header {
   height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0px 0px 10px 2px #525050;
-  background-color: #2a3d66;
-  margin-bottom: 2rem;
+  background-color: var(--clr-bg);
 
   .Ul {
     margin-left: -7%;
@@ -31,7 +34,7 @@
       font-family: Open Sans Condensed;
       font-size: 1.8rem;
       text-decoration: none;
-      color: #d789d7;
+      color: var(--clr-nav);
       &:hover {
         color: red;
       }
