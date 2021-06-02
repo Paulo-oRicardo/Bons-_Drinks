@@ -1,5 +1,10 @@
 import React from "react";
 import styles from "./styles.module.scss";
-export default function Button() {
-  return <button className={styles.neonButton}>Enviar</button>;
+export default function Button(props) {
+  const { clickButton } = props;
+  return (
+    <button className={styles.neonButton} onClick={clickButton}>
+      Enviar
+    </button>
+  );
 }

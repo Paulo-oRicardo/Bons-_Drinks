@@ -6,6 +6,7 @@ import Sobre from "./Components/Sobre";
 import NossoTime from "./Components/NossoTime";
 import Contato from "./Components/Contato";
 import Footer from "./Components/Footer";
+import Search from "./Components/SearchDrink";
 
 const App = () => {
   return (
@@ -27,6 +28,9 @@ const App = () => {
           </Route>
           <Route path="/contato">
             <Contato />
+          </Route>
+          <Route path="/search">
+            <Search />
           </Route>
         </Switch>
         <Footer />

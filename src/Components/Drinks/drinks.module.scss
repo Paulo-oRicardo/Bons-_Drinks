@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,500&display=swap");
+:root {
+  --typewriterSpeed: 4s;
+}
+.drinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 5%;
+  .header {
+    button {
+      margin-left: 38rem;
+    }
+  }
+  h1 {
+    font-size: 3rem;
+    padding: 1rem 0;
+    color: #d789d7;
+    font-family: Roboto Mono;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+    &::before {
+      background: #faf3f3;
+      // steps run as number in params, and ease run continuous
+      animation: typewriter var(--typewriterSpeed) steps(9) 500ms forwards; // with forwards the animation not return, only happen a time
+    }
+    &::after {
+      width: 0.1em;
+      height: 5rem;
+      margin: auto 0;
+      background: #faf3f3;
+      animation: typewriter var(--typewriterSpeed) steps(9) 500ms forwards,
+        blink 750ms steps(9) infinite;
+    }
+  }
+}
+.contentDrinks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 55px;
+
+  padding: 0 2%;
+}
+.contentDrinksOnly {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #dad4d4;
+  border: 1px solid black;
+  border-radius: 2%;
+  width: 300px;
+  height: 350px;
+  text-align: center;
+  .drinkImg {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10%;
+    border-radius: 8px;
+  }
+}
+@keyframes typewriter {
+  //Only run Left - Right 100%
+  to {
+    left: 100%;
+  }
+}
+@keyframes blink {
+  //Only run Left - Right 100%
+  to {
+    background: transparent;
+  }
+}

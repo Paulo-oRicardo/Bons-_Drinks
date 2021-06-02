@@ -11,7 +11,7 @@ export default function Header() {
             <Link to="drinks">Drinks</Link>
           </li>
           <li>
-            <Link to="sobre">Sobre Nós</Link>
+            <Link to="sobre">About Us</Link>
           </li>
           <li>
             <Link to="/">
@@ -19,10 +19,10 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link to="nosso_time">Nosso</Link>
+            <Link to="nosso_time">Our Team</Link>
           </li>
           <li>
-            <Link to="contato">Contato</Link>
+            <Link to="contato">Contact</Link>
           </li>
         </ul>
       </nav>

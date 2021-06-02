@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,500&display=swap");
+:root {
+  --typewriterSpeed: 4s;
+}
+.contentOur {
+  height: 100vh;
+  text-align: center;
+  background-color: #5d54a4;
+  h1 {
+    font-size: 3rem;
+    padding: 1rem 0;
+    color: #d789d7;
+    font-family: Roboto Mono;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+    &::before {
+      background: #5d54a4;
+      // steps run as number in params, and ease run continuous
+      animation: typewriter var(--typewriterSpeed) steps(9) 500ms forwards; // with forwards the animation not return, only happen a time
+    }
+    &::after {
+      width: 0.1em;
+      height: 5rem;
+      margin: auto 0;
+      background: #faf3f3;
+      animation: typewriter var(--typewriterSpeed) steps(9) 500ms forwards,
+        blink 750ms steps(9) infinite;
+    }
+  }
+  .contentAccordion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.show {
+  display: flex !important;
+}
+.dropDown {
+  display: flex !important;
+}
+
+@keyframes typewriter {
+  //Only run Left - Right 100%
+  to {
+    left: 100%;
+  }
+}
+@keyframes blink {
+  //Only run Left - Right 100%
+  to {
+    background: transparent;
+  }
+}
