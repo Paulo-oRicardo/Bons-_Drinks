@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import UseFetch from "../../hooks/useFetch";
 import styles from "./drinksPop.module.scss";
-import { Link } from "react-router-dom";
 import Modal from "../Modal";
 export default function Drinks() {
   const [modal, setModal] = useState(false);
@@ -10,7 +9,7 @@ export default function Drinks() {
   const [drinkModal, setDrinkModal] = useState({});
 
   const returnModal = () => {
-    if (modal) return <Modal dados={domal} modal={setBoolean} />;
+    if (modal) return <Modal dados={domal} closeDrink={setBoolean} />;
   };
 
   const setBoolean = () => {
@@ -38,7 +37,6 @@ export default function Drinks() {
                   setDomal(dataModal.length === 0 ? drink : dataModal[0]);
                   setId(drink.idDrink);
                   setDrinkModal(dataModal[0]);
-                  console.log(dataModal);
                 }}
               >
                 About as

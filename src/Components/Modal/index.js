@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./modal.module.scss";
-const Modal = ({ dados, switchDrink }) => {
+const Modal = ({ dados, closeDrink }) => {
   const getIngredients = (drink) => {
     const drinkEntries = Object.entries(drink);
     return drinkEntries
@@ -11,19 +11,26 @@ const Modal = ({ dados, switchDrink }) => {
       .map(([key, value]) => value)
       .join(", ");
   };
-
   return (
     <section className={styles.container}>
       <div className={styles.modalBox}>
-        <button onClick={() => switchDrink()}>X</button>
+        <button onClick={() => closeDrink()}>X</button>
         <div className={styles.information}>
           <img src={dados.strDrinkThumb} alt={dados.strDrink} />
           <div className={styles.description}>
             <h3>{dados.strDrink}</h3>
-            <p> Drink: {dados.strGlass}</p>
-            <p> IBA: {dados.strIBA}</p>
-            <p> Ingredients: {`${getIngredients(dados)}`}</p>
-            <p> Instructions {dados.strInstructions}</p>
+            <p>
+              <strong> Drink: </strong> {dados.strGlass}
+            </p>
+            <p>
+              <strong>IBA: </strong> {dados.strIBA}
+            </p>
+            <p>
+              <strong>Ingredients: </strong> {`${getIngredients(dados)}`}
+            </p>
+            <p>
+              <strong>Instructions: </strong> {dados.strInstructions}
+            </p>
           </div>
         </div>
       </div>

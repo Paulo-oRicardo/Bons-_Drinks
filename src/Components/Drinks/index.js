@@ -14,16 +14,16 @@ export default function Drinks() {
             Search <img src="./lupa.svg" alt="lupa" />
           </Link>
           <Link to="/Drinkspop">Populares</Link>
-          <div className={styles.containerData}>
-            <Switch>
-              <Route exact path="/DrinksPop">
-                <DrinkPop />
-              </Route>
-              <Route path="/search">
-                <Search />
-              </Route>
-            </Switch>
-          </div>
+        </div>
+        <div className={styles.containerData}>
+          <Switch>
+            <Route exact path="/DrinksPop">
+              <DrinkPop />
+            </Route>
+            <Route path="/search">
+              <Search />
+            </Route>
+          </Switch>
         </div>
       </section>
     </Router>

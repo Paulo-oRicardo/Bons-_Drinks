@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Button from "../Button";
 import styles from "./search.module.scss";
-import { Link } from "react-router-dom";
 import Modal from "../Modal";
 import { getSubtypes, getFilteredDrinks } from "../../services/Fetchs";
 const Search = () => {
@@ -11,12 +10,13 @@ const Search = () => {
   const [domal, setDomal] = useState({});
   const [categoria, setCategoria] = useState(null);
   const returnModal = () => {
-    if (modal) return <Modal dados={domal} modal={setBoolean} />;
+    if (modal) return <Modal dados={domal} closeDrink={setBoolean} />;
   };
 
   const setBoolean = () => {
-    setModal(!modal);
+    return setModal(!modal);
   };
+
   const handleClick = async (e) => {
     e.preventDefault();
     const dados = await fetch(
@@ -25,6 +25,7 @@ const Search = () => {
     const response = await dados.json();
     setDrinks(response.drinks);
   };
+
   const changeFilter = async (e) => {
     e.preventDefault();
     const type = e.target.value;
@@ -33,6 +34,7 @@ const Search = () => {
     localStorage.setItem("type", type);
     setCategoria(data);
   };
+
   const filterDrinks = async (e) => {
     e.preventDefault();
     let select = e.target.value;
@@ -43,7 +45,6 @@ const Search = () => {
 
   return (
     <section className={styles.contentSearch}>
-      <Link to="drinks">Drinks</Link>
       <select onChange={changeFilter}>
         <option value="" select disabled>
           Selecione
