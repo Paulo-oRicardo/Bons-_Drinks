@@ -49,7 +49,7 @@ const Search = () => {
       <div className={styles.optionSearch}>
         <div className={styles.optionSelect}>
           <select className={styles.selectOne} onChange={changeFilter}>
-            <option value="" select disabled>
+            <option value="" selected disabled>
               Selecione
             </option>
             <option value="a">Alcóolico</option>
@@ -57,7 +57,7 @@ const Search = () => {
             <option value="c">Copo</option>
           </select>
           <select className={styles.selectTwo} onChange={filterDrinks}>
-            <option value="" select disabled>
+            <option value="" selected disabled>
               Selecione
             </option>
             {categoria
@@ -90,20 +90,19 @@ const Search = () => {
           drinks.map((drink) => {
             return (
               <div className={styles.contentDrinksOnly} key={drink.idDrink}>
-                <img
-                  className={styles.drinkImg}
-                  src={drink.strDrinkThumb}
-                  alt="image do drink"
-                />
-                <h2>{drink.strDrink}</h2>
                 <button
                   onClick={() => {
                     setBoolean();
                     setDomal(drink);
                   }}
                 >
-                  know more
+                  <img
+                    className={styles.drinkImg}
+                    src={drink.strDrinkThumb}
+                    alt="image do drink"
+                  />
                 </button>
+                <h2>{drink.strDrink}</h2>
               </div>
             );
           })

@@ -23,13 +23,6 @@ export default function Drinks() {
         {allDrinks.slice(85, 100).map((drink) => {
           return (
             <div className={styles.contentDrinksOnly} key={drink.idDrink}>
-              <img
-                className={styles.drinkImg}
-                src={drink.strDrinkThumb}
-                alt="Drinks"
-              />
-
-              <h2>{drink.strDrink}</h2>
               <button
                 onClick={() => {
                   setBoolean();
@@ -37,8 +30,13 @@ export default function Drinks() {
                   setId(drink.idDrink);
                 }}
               >
-                About as
+                <img
+                  className={styles.drinkImg}
+                  src={drink.strDrinkThumb}
+                  alt="Drinks"
+                />
               </button>
+              <h2>{drink.strDrink}</h2>
             </div>
           );
         })}

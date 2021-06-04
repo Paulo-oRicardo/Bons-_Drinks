@@ -1,6 +1,6 @@
 .contentSearch {
   .optionSearch {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     margin-top: 2rem;
@@ -56,31 +56,49 @@
     align-items: center;
     justify-items: center;
 
-    row-gap: 50px;
-    padding: 0 5%;
+    column-gap: 70px;
+    row-gap: 30px;
   }
   .contentDrinksOnly {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-direction: column;
-    background-color: #5d54a4;
-    border: 1px solid black;
-    border-radius: 2%;
-    width: 200px;
-    height: 250px;
+
+    border-radius: 10px;
+    width: 210px;
+    height: 210px;
+    overflow: hidden;
+
     text-align: center;
-    outline: auto;
-    color: #d789d7;
+    box-shadow: 0 0 1.5em #d789d7;
+
+    &:hover {
+      animation: upCard 1200ms;
+    }
     .drinkImg {
       width: 100%;
-      height: 80%;
-      margin-bottom: 4%;
-      margin-top: -13px;
+      height: 100%;
     }
     button {
-      padding: 0.2rem 0.8rem;
-      border-radius: 7px;
+      cursor: pointer;
+      background: transparent;
+      border: none;
     }
+    h2 {
+      transform: translateY(-100%);
+      color: #f3f3f3;
+      background-color: rgba($color: #000000, $alpha: 0.7);
+      width: 100%;
+      padding: 0.2rem 0;
+      border-radius: 5px;
+    }
+  }
+}
+@keyframes upCard {
+  //Only run Left - Right 100%
+  to {
+    filter: brightness(0.8);
+    transform: scale(1.1);
   }
 }

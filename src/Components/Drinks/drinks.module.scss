@@ -4,42 +4,20 @@
 }
 .drinks {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 5%;
+
   background: #5d54a4;
+
   h1 {
     font-size: 3rem;
     padding: 1rem 0;
     color: #d789d7;
     font-family: Roboto Mono;
-    margin-right: 5%;
     font-weight: 500;
     position: relative;
     display: inline-block;
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-    }
-    &::before {
-      background: #5d54a4;
-      // steps run as number in params, and ease run continuous
-      animation: typewriter var(--typewriterSpeed) steps(6) 500ms forwards; // with forwards the animation not return, only happen a time
-    }
-    &::after {
-      width: 0.1em;
-      height: 5rem;
-      margin: auto 0;
-      background: #5d54a4;
-      animation: typewriter var(--typewriterSpeed) steps(6) 500ms forwards,
-        blink 750ms steps(6) infinite;
-    }
   }
   .containerData {
     display: flex;
@@ -52,7 +30,11 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-
+    .Search {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
     a {
       text-decoration: none;
       font-size: 2rem;
@@ -65,18 +47,5 @@
         width: 25px;
       }
     }
-  }
-}
-
-@keyframes typewriter {
-  //Only run Left - Right 100%
-  to {
-    left: 100%;
-  }
-}
-@keyframes blink {
-  //Only run Left - Right 100%
-  to {
-    background: transparent;
   }
 }
