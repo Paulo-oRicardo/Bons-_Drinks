@@ -7,9 +7,19 @@ import NossoTime from "./Components/NossoTime";
 import Contato from "./Components/Contato";
 import Footer from "./Components/Footer";
 import Search from "./Components/SearchDrink";
+import Loader from "./Components/Loader";
+import { useEffect, useState } from "react";
 
 const App = () => {
-  return (
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+  return loading ? (
+    <Loader />
+  ) : (
     <div className="App">
       <Router>
         <Header />

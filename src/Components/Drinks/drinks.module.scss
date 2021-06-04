@@ -8,9 +8,26 @@
   align-items: center;
   flex-direction: column;
   margin-bottom: 5%;
+  .containerData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   .header {
-    button {
-      margin-left: 38rem;
+    a {
+      text-decoration: none;
+      font-size: 2rem;
+      font-family: Roboto Mono;
+      width: 12%;
+      margin-right: 10rem;
+      color: #d789d7;
+      &:hover {
+        color: #5d54a4;
+      }
+      img {
+        width: 25px;
+      }
     }
   }
   h1 {
@@ -18,6 +35,7 @@
     padding: 1rem 0;
     color: #d789d7;
     font-family: Roboto Mono;
+    margin-left: 13%;
     font-weight: 500;
     position: relative;
     display: inline-block;
@@ -33,43 +51,19 @@
     &::before {
       background: #faf3f3;
       // steps run as number in params, and ease run continuous
-      animation: typewriter var(--typewriterSpeed) steps(9) 500ms forwards; // with forwards the animation not return, only happen a time
+      animation: typewriter var(--typewriterSpeed) steps(6) 500ms forwards; // with forwards the animation not return, only happen a time
     }
     &::after {
       width: 0.1em;
       height: 5rem;
       margin: auto 0;
       background: #faf3f3;
-      animation: typewriter var(--typewriterSpeed) steps(9) 500ms forwards,
-        blink 750ms steps(9) infinite;
+      animation: typewriter var(--typewriterSpeed) steps(6) 500ms forwards,
+        blink 750ms steps(6) infinite;
     }
   }
 }
-.contentDrinks {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 55px;
 
-  padding: 0 2%;
-}
-.contentDrinksOnly {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #dad4d4;
-  border: 1px solid black;
-  border-radius: 2%;
-  width: 300px;
-  height: 350px;
-  text-align: center;
-  .drinkImg {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 10%;
-    border-radius: 8px;
-  }
-}
 @keyframes typewriter {
   //Only run Left - Right 100%
   to {

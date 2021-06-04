@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../Button";
 import styles from "./styles.module.scss";
+
 export default function Contato() {
   return (
     <section className={styles.containerContato}>
@@ -10,13 +11,13 @@ export default function Contato() {
 
         <form className={styles.contactForm} action="">
           <label htmlFor="">Nome:</label>
-          <input type="text" />
+          <input type="text" required />
 
           <label htmlFor="">E-mail:</label>
-          <input type="text" />
+          <input type="text" required />
 
           <label htmlFor="mensagem">Mensagem:</label>
-          <textarea name="mensagem" id="" cols="20" rows="8" />
+          <textarea name="mensagem" id="" cols="20" rows="8" required />
 
           <Button />
         </form>
