@@ -4,7 +4,7 @@ export default function index() {
   return (
     <footer>
       <p className={styles.pFooter}>
-        Resilia 2021 - Alguns direitos reservados
+        Paulo Yokoyama - Alguns direitos reservados
       </p>
     </footer>
   );

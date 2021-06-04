@@ -14,13 +14,14 @@
   .modalBox {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     button {
       width: 16%;
       padding: 0.4rem 1rem;
       font-size: 2rem;
       font-weight: bold;
-      margin-left: 84%;
+      margin-left: 100%;
       background: transparent;
       border: none;
       cursor: pointer;
@@ -31,14 +32,37 @@
     }
     background: #5d54a4;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
+    height: 55%;
+    border-radius: 8px;
   }
   .information {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+
     img {
-      width: 200px;
-      height: 250px;
+      width: 300px;
+      height: 285px;
+      margin-bottom: 2.9rem;
+      padding: 0 2rem;
+      border-radius: 1rem;
+    }
+    .description {
+      height: 100%;
+      margin-bottom: 5.5rem;
+      h3 {
+        text-align: center;
+        font-size: 3rem;
+        color: #d789d7;
+      }
+      strong {
+        color: #f3f3f3;
+      }
+      p {
+        padding: 0.5rem 0;
+        font-size: 1rem;
+        font-family: Roboto Mono;
+      }
     }
   }
 }

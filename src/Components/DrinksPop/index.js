@@ -6,7 +6,6 @@ export default function Drinks() {
   const [modal, setModal] = useState(false);
   const [domal, setDomal] = useState({});
   const [id, setId] = useState({});
-  const [drinkModal, setDrinkModal] = useState({});
 
   const returnModal = () => {
     if (modal) return <Modal dados={domal} closeDrink={setBoolean} />;
@@ -36,7 +35,6 @@ export default function Drinks() {
                   setBoolean();
                   setDomal(dataModal.length === 0 ? drink : dataModal[0]);
                   setId(drink.idDrink);
-                  setDrinkModal(dataModal[0]);
                 }}
               >
                 About as

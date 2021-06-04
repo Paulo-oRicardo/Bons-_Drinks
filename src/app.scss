@@ -1,0 +1,17 @@
+.appContainer {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  background-color: #5d54a4;
+}
+.header {
+  grid-area: header;
+}
+.footer {
+  grid-area: footer;
+}

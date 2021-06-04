@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState } from "react";
 import Button from "../Button";
@@ -45,44 +46,56 @@ const Search = () => {
 
   return (
     <section className={styles.contentSearch}>
-      <select onChange={changeFilter}>
-        <option value="" select disabled>
-          Selecione
-        </option>
-        <option value="a">Alcóolico</option>
-        <option value="c">Categoria</option>
-        <option value="c">Copo</option>
-      </select>
-      <select onChange={filterDrinks}>
-        <option value="" select disabled>
-          Selecione
-        </option>
-        {categoria
-          ? categoria.map((category) => {
-              let type = Object.keys(category)[0];
-              let index = localStorage.getItem("type");
-              return (
-                <option key={category[type]} id={index} value={category[type]}>
-                  {category[type]}
-                </option>
-              );
-            })
-          : () => {
-              return;
-            }}
-      </select>
-      <form onSubmit={handleClick}>
-        <label htmlFor="">Pesquisa</label>
-        <input type="text" name="drink" />
-        <Button />
-      </form>
-      <ul>
+      <div className={styles.optionSearch}>
+        <div className={styles.optionSelect}>
+          <select className={styles.selectOne} onChange={changeFilter}>
+            <option value="" select disabled>
+              Selecione
+            </option>
+            <option value="a">Alcóolico</option>
+            <option value="c">Categoria</option>
+            <option value="c">Copo</option>
+          </select>
+          <select className={styles.selectTwo} onChange={filterDrinks}>
+            <option value="" select disabled>
+              Selecione
+            </option>
+            {categoria
+              ? categoria.map((category) => {
+                  let type = Object.keys(category)[0];
+                  let index = localStorage.getItem("type");
+                  return (
+                    <option
+                      key={category[type]}
+                      id={index}
+                      value={category[type]}
+                    >
+                      {category[type]}
+                    </option>
+                  );
+                })
+              : () => {
+                  return;
+                }}
+          </select>
+        </div>
+        <form className={styles.form} onSubmit={handleClick}>
+          <label htmlFor="">Pesquisa: </label>
+          <input type="text" name="drink" />
+          <Button />
+        </form>
+      </div>
+      <div className={styles.contentDrinks}>
         {drinks ? (
-          drinks.slice(0, 14).map((drink) => {
+          drinks.map((drink) => {
             return (
-              <li key={drink.idDrink} className={styles.listDrink}>
-                <img src={drink.strDrinkThumb} alt="image do drink" />
-                <p>{drink.strDrink}</p>
+              <div className={styles.contentDrinksOnly} key={drink.idDrink}>
+                <img
+                  className={styles.drinkImg}
+                  src={drink.strDrinkThumb}
+                  alt="image do drink"
+                />
+                <h2>{drink.strDrink}</h2>
                 <button
                   onClick={() => {
                     setBoolean();
@@ -91,13 +104,13 @@ const Search = () => {
                 >
                   know more
                 </button>
-              </li>
+              </div>
             );
           })
         ) : (
           <img src="https://neilpatel.com/wp-content/uploads/2019/05/ilustracao-panda-com-problema-error-404-not-found.jpeg" />
         )}
-      </ul>
+      </div>
       {returnModal()}
     </section>
   );

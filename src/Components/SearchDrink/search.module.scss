@@ -1,4 +1,44 @@
 .contentSearch {
+  .optionSearch {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
+  .optionSelect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    .selectOne {
+      padding: 0.2rem 1rem;
+      font-size: 0.7rem;
+    }
+    :is(.selectOne, .selectTwo) {
+      border-radius: 30px;
+    }
+    .selectTwo {
+      padding: 0.2rem 1.5rem;
+      font-size: 0.7rem;
+    }
+  }
+  form {
+    label {
+      font-size: 1.3rem;
+      font-family: Roboto mono;
+    }
+    input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #f3f3f3;
+      margin: 0 12px;
+      outline: 0;
+    }
+    button {
+      font-size: 1rem;
+    }
+  }
   ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -8,6 +48,39 @@
     img {
       width: 200px;
       height: 200px;
+    }
+  }
+  .contentDrinks {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+
+    row-gap: 50px;
+    padding: 0 5%;
+  }
+  .contentDrinksOnly {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #5d54a4;
+    border: 1px solid black;
+    border-radius: 2%;
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    outline: auto;
+    color: #d789d7;
+    .drinkImg {
+      width: 100%;
+      height: 80%;
+      margin-bottom: 4%;
+      margin-top: -13px;
+    }
+    button {
+      padding: 0.2rem 0.8rem;
+      border-radius: 7px;
     }
   }
 }
