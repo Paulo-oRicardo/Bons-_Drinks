@@ -12,7 +12,12 @@ const Modal = ({ dados, closeDrink }) => {
       .join(", ");
   };
   return (
-    <section className={styles.container}>
+    <section
+      className={styles.container}
+      onClick={(e) => {
+        if (e.target.className == styles.container) closeDrink();
+      }}
+    >
       <div className={styles.modalBox}>
         <button onClick={() => closeDrink()}>X</button>
         <div className={styles.information}>

@@ -20,30 +20,80 @@
     font-size: 2.4rem;
     font-weight: 400;
     color: #d789d7;
-    padding-left: 3rem;
+    padding-left: 2.2rem;
   }
-  .Ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    li {
-      padding: 0 1.7rem;
-      font-size: 1.2rem;
-    }
 
-    a {
-      font-family: Open Sans Condensed;
-      font-size: 1.8rem;
-      text-decoration: none;
-      color: var(--clr-nav);
-      &:hover {
-        color: #f3f3f3;
-        border-bottom: 1px solid #d789d7;
+  .buttonMobile {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 13%;
+    display: none;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .navDesktop {
+    .Ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      li {
+        padding: 0 1.7rem;
+        font-size: 1.2rem;
       }
-      &:active {
-        color: #2a3d66;
+
+      a {
+        font-family: Open Sans Condensed;
+        font-size: 1.8rem;
+        text-decoration: none;
+        color: var(--clr-nav);
+        &:hover {
+          color: #f3f3f3;
+          border-bottom: 1px solid #d789d7;
+        }
+        &:active {
+          color: #2a3d66;
+        }
       }
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .Header {
+    .navDesktop {
+      display: none;
+    }
+    .navMobile {
+      width: 100vw;
+      height: 1vh;
+      position: absolute;
+      .Ul {
+        list-style-type: none;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 10;
+        margin-top: 2rem;
+        padding-bottom: 8rem;
+        background-color: rgba($color: #000000, $alpha: 0.7);
+        li {
+          border-bottom: 1px solid white;
+          padding: 1rem 0;
+          a {
+            color: white;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+    .buttonMobile {
+      display: block;
     }
   }
 }

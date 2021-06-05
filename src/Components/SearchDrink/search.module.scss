@@ -102,3 +102,10 @@
     transform: scale(1.1);
   }
 }
+@media screen and (max-width: 700px) {
+  .header {
+    a {
+      font-size: 0.8rem;
+    }
+  }
+}

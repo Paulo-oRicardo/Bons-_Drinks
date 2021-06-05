@@ -106,3 +106,16 @@
     background: transparent;
   }
 }
+@media screen and (max-width: 700px) {
+  .containerContato {
+    max-width: 100vh;
+    .divContact {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      img {
+        width: 50%;
+      }
+    }
+  }
+}

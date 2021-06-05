@@ -16,7 +16,7 @@
     color: #d789d7;
     font-family: Roboto Mono;
     font-weight: 500;
-    position: relative;
+
     display: inline-block;
   }
   .containerData {
@@ -46,6 +46,13 @@
       img {
         width: 25px;
       }
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .header {
+    a {
+      font-size: 0.8rem;
     }
   }
 }

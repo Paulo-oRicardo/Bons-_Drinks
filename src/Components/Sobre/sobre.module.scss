@@ -63,6 +63,7 @@
     opacity: 0;
     transform: translateX(3rem);
     animation: fadeInRight 2s ease forwards;
+    position: inherit;
   }
 }
 @keyframes typewriter {
@@ -89,3 +90,11 @@
 //     transform: translateX(0);
 //   }
 // }
+@media screen and (max-width: 700px) {
+  .divSobreNos {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+  }
+}
