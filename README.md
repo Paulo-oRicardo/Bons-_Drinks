@@ -4,11 +4,11 @@
 
 <summary>Veja mais</summary>
 
-1.  [O que é o projeto](https://github.com/GabrielSouzaHub/projetoStone##%f0%9f%96%bc%ef%b8%8f-O-que-%c3%a9-o-projeto)
-2.  [O que faz](https://github.com/GabrielSouzaHub/projetoStone#O-que-faz)
-3.  [O que é uma API](https://github.com/GabrielSouzaHub/projetoStone#O-que-%c3%a9-uma-api)
-4.  [Como está sendo consumida a API](https://github.com/GabrielSouzaHub/projetoStone#Como-est%c3%a1-funcionando-esta-api)
-5.  [Como baixar e rodar o projeto](https://github.com/GabrielSouzaHub/projetoStone#Como-baixar-e-rodar-o-projeto)
+1.  [O que é o projeto](https://github.com/Paulo-oRicardo/projetoStone##%f0%9f%96%bc%ef%b8%8f-O-que-%c3%a9-o-projeto)
+2.  [O que faz](https://github.com/Paulo-oRicardo/projetoStone#O-que-faz)
+3.  [O que é uma API](https://github.com/Paulo-oRicardo/projetoStone#O-que-%c3%a9-uma-api)
+4.  [Como está sendo consumida a API](https://github.com/Paulo-oRicardo/projetoStone#Como-est%c3%a1-funcionando-esta-api)
+5.  [Como baixar e rodar o projeto](https://github.com/Paulo-oRicardo/projetoStone#Como-baixar-e-rodar-o-projeto)
 </details>
 
 ## 🖼️ O que é o projeto
