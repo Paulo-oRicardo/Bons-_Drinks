@@ -1,4 +1,4 @@
-# 🍹 Bons Drinks 
+# 🍹 [Bons Drinks](https://drinkspaulo.netlify.app/) 
 	
 ## 📖 Sumário
 
@@ -61,3 +61,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## Autor:	 	  
    [Paulo Ricardo](https://github.com/Paulo-oRicardo)     [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/paulo-yokoyama/)](https://www.linkedin.com/in/paulo-yokoyama/)
+   
+## 📌[Site](https://drinkspaulo.netlify.app/):
+   Deploy realizado na plataforma netlify, link do site https://drinkspaulo.netlify.app/
