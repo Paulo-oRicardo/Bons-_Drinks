@@ -7,7 +7,7 @@
 1.  [O que é o projeto](https://github.com/Paulo-oRicardo/Bons-_Drinks##%f0%9f%96%bc%ef%b8%8f-O-que-%c3%a9-o-projeto)
 2.  [O que faz](https://github.com/Paulo-oRicardo/Bons-_Drinks#O-que-faz)
 3.  [O que é uma API](https://github.com/Paulo-oRicardo/Bons-_Drinks#O-que-%c3%a9-uma-api)
-4.  [Como está sendo consumida a API](https://github.com/Paulo-oRicardo/Bons-_Drinks#Como-est%c3%a1-funcionando-esta-api)
+4.  [Como está sendo consumida a API](https://github.com/Paulo-oRicardo/Bons-_Drinks##%f0%9f%8e%b2-Como-est%c3%a1-sendo-consumida-a-API)
 5.  [Como baixar e rodar o projeto](https://github.com/Paulo-oRicardo/Bons-_Drinks#Como-baixar-e-rodar-o-projeto)
 </details>
 
