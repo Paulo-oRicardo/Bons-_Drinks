@@ -1,7 +1,17 @@
 .ContainerBonsDrinks {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   img {
-    width: 68%;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 780px) {
+  .ContainerBonsDrinks {
+    img {
+      width: 95%;
+      height: 70%;
+    }
   }
 }

@@ -15,7 +15,7 @@ export default function Header() {
         className={styles.buttonMobile}
         onClick={() => setModalResponsive(!modalResponsive)}
       >
-        <img src="./menu.svg" alt="" />
+        <img src={modalResponsive ? `./menu.svg` : `./letra-x.svg`} alt="" />
       </button>
 
       <nav className={modalResponsive ? styles.navDesktop : styles.navMobile}>

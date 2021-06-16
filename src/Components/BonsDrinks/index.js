@@ -3,7 +3,7 @@ import styles from "./bonsDrinks.module.scss";
 export default function BonsDrinks() {
   return (
     <div className={styles.ContainerBonsDrinks}>
-      <img src="./bg-bons-drinks.jpg" alt="" />
+      <img src="./drinksInit.jpg" alt="" />
     </div>
   );
 }

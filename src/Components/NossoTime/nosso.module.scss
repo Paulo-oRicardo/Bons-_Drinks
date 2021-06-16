@@ -3,9 +3,10 @@
   --typewriterSpeed: 4s;
 }
 .contentOur {
-  height: 100vh;
   text-align: center;
   background-color: #5d54a4;
+  height: 100%;
+
   h1 {
     font-size: 3rem;
     padding: 1rem 0;
@@ -37,7 +38,7 @@
         blink 750ms steps(9) infinite;
     }
   }
-  .contentAccordion {
+  .contentDescriptionTeam {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,6 +47,9 @@
       width: 250px;
       height: 250px;
       border-radius: 50%;
+    }
+    p {
+      width: 300px;
     }
   }
 }
@@ -67,5 +71,17 @@
   //Only run Left - Right 100%
   to {
     background: transparent;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .contentOur {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    margin-bottom: 5%;
+  }
+  .contentDescriptionTeam {
+    display: contents;
   }
 }
